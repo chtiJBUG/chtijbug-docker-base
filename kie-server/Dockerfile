@@ -15,7 +15,7 @@ ENV KIE_VERSION 6.5.0.Final
 ENV CHTIJBUG_REPOSITORY https://oss.sonatype.org/content/repositories/releases
 ENV KIE_CLASSIFIER ee7
 ENV KIE_CONTEXT_PATH kie-server
-ENV CHTIJBUG_VERSION 2.0.6
+ENV CHTIJBUG_VERSION 2.0.7
 ENV JAVA_OPTS -Xms256m -Xmx512m
 
 ###### SWITCH USER root ######
@@ -28,6 +28,7 @@ RUN yum install -y net-tools
 USER jboss
 ####### KIE-SERVER ############
 RUN curl $CHTIJBUG_REPOSITORY/org/chtijbug/drools/kie-server/$CHTIJBUG_VERSION/kie-server-$CHTIJBUG_VERSION.war -o /opt/jboss/wildfly/standalone/deployments/$KIE_CONTEXT_PATH.war
+RUN curl $CHTIJBUG_REPOSITORY/org/chtijbug/drools/drools-framework-swimmingpool-web-ui/$CHTIJBUG_VERSION/drools-framework-swimmingpool-web-ui-$CHTIJBUG_VERSION.war -o /opt/jboss/wildfly/standalone/deployments/swimmingpool-web-ui.war
 
 
 ####### ENVIRONMENT ############
