@@ -28,7 +28,7 @@ RUN yum install -y net-tools
 USER jboss
 ####### KIE-SERVER ############
 RUN curl $CHTIJBUG_REPOSITORY/org/chtijbug/drools/kie-server/$CHTIJBUG_VERSION/kie-server-$CHTIJBUG_VERSION.war -o /opt/jboss/wildfly/standalone/deployments/$KIE_CONTEXT_PATH.war
-RUN curl $CHTIJBUG_REPOSITORY/org/chtijbug/drools/drools-framework-swimmingpool-web-ui/$CHTIJBUG_VERSION/drools-framework-swimmingpool-web-ui-$CHTIJBUG_VERSION.war -o /opt/jboss/wildfly/standalone/deployments/swimmingpool-web-ui.war
+RUN curl $CHTIJBUG_REPOSITORY/org/chtijbug/drools/drools-framework-swimmingpool-web-ui/$CHTIJBUG_VERSION/drools-framework-swimmingpool-web-ui-$CHTIJBUG_VERSION.war -o /opt/jboss/wildfly/standalone/deployments/swimmingpool-web.war
 
 
 ####### ENVIRONMENT ############
