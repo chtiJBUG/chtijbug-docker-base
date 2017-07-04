@@ -35,7 +35,7 @@ echo "Using '$KIE_SERVER_LOCATION' as KIE server location"
 if [ -n "$KIE_SERVER_CONTROLLER" ]; then
     echo "Using '$KIE_SERVER_CONTROLLER' as KIE server controller"
     echo "Using '$KIE_MAVEN_REPO' for the kie-workbench Maven repository URL"
-    JBOSS_ARGUMENTS="$JBOSS_ARGUMENTS -Dorg.kie.server.controller=$KIE_SERVER_CONTROLLER -Dorg.kie.server.controller.user=$KIE_SERVER_CONTROLLER_USER -Dorg.kie.server.controller.pwd=$KIE_SERVER_CONTROLLER_PWD "
+    JBOSS_ARGUMENTS="$JBOSS_ARGUMENTS -Djava.net.preferIPv4Stack=true -Dorg.kie.server.controller=$KIE_SERVER_CONTROLLER -Dorg.kie.server.controller.user=$KIE_SERVER_CONTROLLER_USER -Dorg.kie.server.controller.pwd=$KIE_SERVER_CONTROLLER_PWD "
 fi
 
 # Start Wildfly with the given arguments.

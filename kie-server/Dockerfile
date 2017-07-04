@@ -15,7 +15,7 @@ ENV KIE_VERSION 6.5.0.Final
 ENV CHTIJBUG_REPOSITORY https://oss.sonatype.org/content/repositories/releases
 ENV KIE_CLASSIFIER ee7
 ENV KIE_CONTEXT_PATH kie-server
-ENV CHTIJBUG_VERSION 2.0.7
+ENV CHTIJBUG_VERSION 2.0.10
 ENV JAVA_OPTS -Xms256m -Xmx512m
 
 ###### SWITCH USER root ######
